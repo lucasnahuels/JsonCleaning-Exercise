@@ -1,12 +1,11 @@
-﻿// See https://aka.ms/new-console-template for more information
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
+﻿using Newtonsoft.Json;
 
-Console.WriteLine("Hello, World!");
 HttpClient client = new HttpClient();
 string s = await client.GetStringAsync("https://coderbyte.com/api/challenges/json/json-cleaning");
-RemoveInvalidValues(s);
-
+Console.WriteLine(s);
+var onlyValidValues =RemoveInvalidValues(s);
+Console.WriteLine();
+Console.WriteLine(onlyValidValues);
 
 static string RemoveInvalidValues(string input)
 {
