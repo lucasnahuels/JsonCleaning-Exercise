@@ -3,7 +3,7 @@
 HttpClient client = new HttpClient();
 string s = await client.GetStringAsync("https://coderbyte.com/api/challenges/json/json-cleaning");
 Console.WriteLine(s);
-var onlyValidValues =RemoveInvalidValues(s);
+var onlyValidValues = RemoveInvalidValues(s);
 Console.WriteLine();
 Console.WriteLine(onlyValidValues);
 
